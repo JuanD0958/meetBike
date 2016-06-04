@@ -1,0 +1,86 @@
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br><br>
+
+        <h1 class="header left light-blue-text text-darken-1">OUR ATTEMPT TO MAKE YOUR BIKE COOLER</h1>
+
+        <div class="row center">
+          <h5 class="header col s12 light">Just Be Happy</h5>
+        </div>
+        <div class="row center">
+          <a  id="download-button" href="#login"class="btn-large waves-effect waves-light teal lighten-1">Iniciar sesion</a>
+         
+        </div>
+        <br><br>
+
+      </div>
+    </div>
+
+    <div class="parallax"><%= image_tag "background1.jpg" %></div>
+
+  </div>
+
+
+  <div class="container">
+    <div class="section">
+
+  <div class="container">
+    <div class="section">
+
+      <div class="row">
+        <div class="col l12 m12 s12 center">
+          <h3><i class="mdi-content-send brown-text"></i></h3>
+          <h4>Contact Us</h4>
+
+          <p class="center-align light">You can contact us in our e-mail to make any comment or QaC
+            <a href="https://mail.google.com/mail/u/0/#inbox?compose=new">help.meetbike@gmail.com</a> 
+            We'll be glad to see your comments and your opinion.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col l6 m6 s12 light">Keep riding your bike</h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="parallax"><%= image_tag "background2.jpg" %></div></div>
+
+  </div>
+<div id="login" class="container">
+      <h2>Iniciar sesion</h2>
+
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="field">
+        <%= f.label :email %><br />
+        <%= f.email_field :email %>
+      </div>
+
+      <div class="field">
+        <%= f.label :password %><br />
+        <%= f.password_field :password, autocomplete: "off" %>
+      </div>
+
+      <% if devise_mapping.rememberable? -%>
+        <div class="field">
+          <%= f.check_box :remember_me %>
+          <%= f.label :remember_me %>
+        </div>
+      <% end -%>
+
+      <div class="btn-large waves-effect waves-light teal lighten-1" >
+        <%= f.submit "Log in" %>
+      </div>
+    <% end %>
+
+  
+
+</div>

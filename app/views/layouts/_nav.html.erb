@@ -1,0 +1,28 @@
+  <nav class="white" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" class="brand-logo">meetBike</a>
+      
+
+      <ul class="right hide-on-med-and-down">
+        <% if user_signed_in? %>
+          <li><%= link_to "Cerrar sesion", destroy_user_session_path, :method => :delete %></li>
+        <%else%>
+          <li>
+            <%= render "devise/shared/links" %>
+          </li>
+          <li>
+            <a href="#login">Iniciar sesion</a>
+          </li>
+        <%end%>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+        <% if user_signed_in? %>
+           <li><a href=""></a><%= link_to "Cerrar sesion", destroy_user_session_path, :method => :delete %></a> </li>
+        <%else%>
+          <%= render "devise/shared/links" %>
+        <%end%>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
