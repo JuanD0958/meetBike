@@ -22,7 +22,7 @@ module MeetBike
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
-
+    config.assets.initialize_on_precompile = false
 
     config.assets.paths << Rails.root.join("app", "assets", "fonts", "font")
     config.assets.precompile += %w( .svg .eot .woff .ttf .woff .woff2)
